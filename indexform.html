@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Regisreation.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Registration</div>
+        <div class="content">
+            <form action="index.html" onsubmit="submittion()">
+                <div class=" user-details">
+                    <div class="input-box">
+                        <span class="details">First Name</span>
+                        <input type="text" placeholder="Enter your name" pattern="[A-z].{2,}"
+                            title="Must be 3 characters at least" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Last Name</span>
+                        <input type="text" placeholder="Enter your last name" pattern="[A-z].{2,}"
+                            title="Must be 3 characters at least" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="text" placeholder="Enter your email"
+                            pattern="[A-z0-9._%+-]+@[A-z0-9.-]+\.[A-z]{2,}$" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input type="tel" placeholder="Enter your number" pattern="^01[0-2,5]\d{8}$"
+                            title="Type only digits(not any character or special case character) and your number must be only 11 digits"
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input type="password" placeholder="Enter your password"
+                            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+                            title="Must begin with Upper cas charactre contain at least one number and one special character, and at least 8 or more characters"
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Confirm Password</span>
+                        <input type="password" placeholder="Confirm your password"
+                            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+                            title="Two Passwords doesn't match" required>
+                    </div>
+                    <div id="Address" class="input-box">
+                        <span class="details">Address</span>
+                        <input type="text" placeholder="Enter your Address" pattern="[A-z].{11,}"
+                            title="Must be 12 characters at least" required>
+                    </div>
+                </div>
+                <div class="gender-details">
+                    <span class="gender-title">Gender</span>
+                    <div class="category">
+                        <select name="Gender" class="Gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function submittion() {
+            alert("Your Data has been submitted successfully\nyou now have an account on our website..\nCongratulations !\n\n >>please , Press Ok to return to our Home page<<");
+        }
+    </script>
+</body>
+
+</html>
+<!--
+    pattern for name
+        pattern="[A-z].{2,}"
+        title="Must be 3 characters at least"
+    pattern for pass
+        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+        title="Must begin with Upper cas charactre contain at least one number and one special character, and at least 8 or more characters"
+    pattern for mail
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+    pattern for phone number
+        <input type="tel" placeholder="Enter your number" pattern="^01[0-2,5]\d{8}$" required>
+        <div class="gender-details">
+            <input type="radio" name="gender" id="dot-1" required>
+            <input type="radio" name="gender" id="dot-2" required>
+            <span class="gender-title">Gender</span>
+            <div class="category">
+                <label for="dot-1">
+                    <span class="dot one"></span>
+                    <span class="gender">Male</span>
+                </label>
+                <label for="dot-2">
+                    <span class="dot two"></span>
+                    <span class="gender">Female</span>
+                </label>
+            </div>
+        </div>
+-->
